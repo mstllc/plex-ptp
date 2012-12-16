@@ -160,9 +160,7 @@ def PtpAccount(title):
 def PtpLoggedIn():
 	
 	html = HTML.ElementFromURL(PTP_URL, cacheTime=0)
-	
-	print(html.xpath('//li[@id="nav_logout"]'))
-	
+		
 	if len(html.xpath('//li[@id="nav_logout"]')) > 0:
 		Log('Found at least one!')
 		return True
